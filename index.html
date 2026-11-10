@@ -1,1 +1,161 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09090d"><meta name="description" content="KAIVAZ — music, stories, projects, and other internet activity."><title>KAIVAZ — personal site</title><link rel="stylesheet" href="assets/css/style.css"></head><body><div class="noise"></div><header class="topbar"><a class="wordmark" href="#home">K<span>✳</span>V</a><nav><a href="#about">ABOUT</a><a href="#music">MUSIC</a><a href="#projects">PROJECTS</a><a href="#links">ELSEWHERE</a></nav><span class="status"><i></i> ONLINE-ish</span></header><main id="home"><section class="hero"><div class="hero-kicker">PERSONAL SITE / EST. 2026 <span>✳</span> WARNER ROBINS, GA</div><h1>KAIVAZ<span class="period">.</span></h1><div class="hero-bottom"><p>Making things, breaking things,<br>and putting ideas on the internet.</p><a class="circle-link" href="#about" aria-label="Scroll to about">↓</a><div class="hero-index">001 — 004<br>INDEPENDENT BY DESIGN</div></div></section><div class="ticker" aria-label="Site topics"><div> MUSIC&nbsp; ✳&nbsp; STORIES&nbsp; ✳&nbsp; CODE&nbsp; ✳&nbsp; GAMES&nbsp; ✳&nbsp; WHATEVER ELSE&nbsp; ✳&nbsp; MUSIC&nbsp; ✳&nbsp; STORIES&nbsp; ✳&nbsp; CODE&nbsp; ✳&nbsp; GAMES&nbsp; ✳&nbsp;</div></div><section class="intro section" id="about"><div class="section-label">01 / A LITTLE CONTEXT</div><div class="intro-copy"><h2>Not a brand deck.<br><em>Just my corner.</em></h2><p>I'm Kaivaz — a writer, music maker, developer, and creator. This is where the different projects end up: songs, animation ideas, experiments, and whatever I'm currently obsessing over.</p><p class="small-note">Look around. Things are a work in progress, same as me.</p></div><div class="stamp">IN<br>PROGRESS<br><b>✳</b></div></section><section class="music section" id="music"><div class="section-label">02 / SOUND FILES</div><div class="section-heading"><h2>Music<span> library</span></h2><p>Original work. More when it's ready.</p></div><div class="player"><div class="player-art"><span>KV</span><small>KAIVAZ<br>ARCHIVE / 001</small></div><div class="player-main"><div class="now-label">NOW SELECTED</div><div class="track-title" id="track-title">Choose a track</div><div class="track-sub" id="track-sub">The player is waiting.</div><div class="progress-wrap"><span id="current-time">0:00</span><input id="seek" type="range" min="0" max="100" value="0" aria-label="Seek"><span id="duration">0:00</span></div><div class="controls"><button id="prev" aria-label="Previous track">|◀</button><button id="play" class="play" aria-label="Play">▶</button><button id="next" aria-label="Next track">▶|</button><span class="volume-label">VOL</span><input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume"></div></div></div><ol class="track-list" id="track-list"><li class="empty">Loading music library…</li></ol><audio id="audio" preload="metadata"></audio><p class="music-note">Add audio files to <code>songs/</code> and list them in <code>assets/js/songs.js</code>. GitHub Pages does not scan folders automatically.</p></section><section class="projects section" id="projects"><div class="section-label">03 / OPEN TABS</div><div class="section-heading"><h2>Things I'm <span>making</span></h2><p>Some are further along than others.</p></div><div class="project-grid"><article class="project-card"><div class="card-top">01 <span>STORY / ANIMATION</span></div><h3>HOTSPOT</h3><p>An original animated series about power, responsibility, and the trouble that comes with both.</p><span class="card-foot">IN DEVELOPMENT ↗</span></article><article class="project-card"><div class="card-top">02 <span>CODE / EXPERIMENTS</span></div><h3>NEXUS CORE</h3><p>A personal software project exploring assistants, interfaces, and useful tools.</p><span class="card-foot">BUILDING ↗</span></article><article class="project-card"><div class="card-top">03 <span>MUSIC / RELEASES</span></div><h3>THE ARCHIVE</h3><p>A growing collection of original tracks, drafts, and releases under the KAIVAZ name.</p><span class="card-foot">ONGOING ↗</span></article></div></section><section class="elsewhere section" id="links"><div class="section-label">04 / ELSEWHERE ON THE INTERNET</div><div class="social-grid"><a href="https://www.instagram.com/milest3e0n3_va/" target="_blank" rel="noopener noreferrer"><span>INSTAGRAM</span><b>↗</b></a><a href="https://www.youtube.com/@MilesT3e0n3_VA" target="_blank" rel="noopener noreferrer"><span>YOUTUBE</span><b>↗</b></a><a href="https://www.facebook.com/profile.php?id=61551910379253" target="_blank" rel="noopener noreferrer"><span>FACEBOOK</span><b>↗</b></a><a href="https://www.tiktok.com/@milest3e0n1_va" target="_blank" rel="noopener noreferrer"><span>TIKTOK</span><b>↗</b></a></div></section></main><footer><a class="footer-mark" href="#home">KAIVAZ<span>.</span></a><span>MADE ON THE INTERNET, BY A PERSON ON THE INTERNET.</span><a href="#home">BACK TO TOP ↑</a></footer><script src="assets/js/songs.js"></script><script src="assets/js/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="KAIVAZ — music, stories, code, and an unnecessarily elaborate corner of the internet.">
+  <title>KAIVAZ — corner of the internet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ticker" aria-label="KAIVAZ topics">
+    <div class="ticker-track">
+      <span>KAIVAZ <b>✳</b> MUSIC <b>✳</b> STORIES <b>✳</b> CODE <b>✳</b> HOTSPOT <b>✳</b> WHATEVER I'M BUILDING NEXT <b>✳</b></span>
+      <span aria-hidden="true">KAIVAZ <b>✳</b> MUSIC <b>✳</b> STORIES <b>✳</b> CODE <b>✳</b> HOTSPOT <b>✳</b> WHATEVER I'M BUILDING NEXT <b>✳</b></span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="hero" id="home">
+      <div class="eyebrow">An unnecessarily elaborate corner of the internet</div>
+      <h1>KAI<span class="outline">VAZ</span><span class="period">.</span></h1>
+      <div class="hero-row">
+        <p class="intro">I make music, build things, write stories, and occasionally start projects that become way bigger than they were supposed to be.</p>
+        <div class="status"><span class="status-dot"></span> Currently building</div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#now">Now</a>
+      <a href="#music">Music</a>
+      <a href="#find">Find me</a>
+    </nav>
+
+    <section class="section about" id="about">
+      <div class="section-label">01 / WHO?</div>
+      <h2>Not a brand. A work in progress.</h2>
+      <div class="about-grid">
+        <article class="card about-card">
+          <p class="big-copy">KAIVAZ is my little creative universe. Music, animation, code, games, weird ideas, and whatever else survives the group chat in my brain long enough to become real.</p>
+          <p class="small-copy">Look around. Things are a work in progress, same as me.</p>
+        </article>
+        <div class="facts" aria-label="About KAIVAZ">
+          <div class="fact"><span>Making</span><strong>Music + stories</strong></div>
+          <div class="fact"><span>Building</span><strong>Digital projects</strong></div>
+          <div class="fact"><span>Energy</span><strong>Organized chaos</strong></div>
+          <div class="fact"><span>Current status</span><strong><i></i> In development</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-label">02 / THE STUFF I'M MAKING</div>
+      <h2>Projects with varying levels of sanity.</h2>
+      <div class="project-grid">
+        <article class="project featured">
+          <div>
+            <div class="project-number">PROJECT_001</div>
+            <h3>HOTSPOT</h3>
+            <p>An animated story about powers, friendship, bad decisions, and a homemade suit that definitely has no chance of causing problems.</p>
+          </div>
+          <div class="project-tag">Animated series / In development</div>
+        </article>
+        <article class="project">
+          <div>
+            <div class="project-number">PROJECT_002</div>
+            <h3>KAIVAZ MUSIC</h3>
+            <p>Dark production, rap, melodies, and ideas that sound better at 1 AM.</p>
+          </div>
+          <div class="project-tag">Music / Loading</div>
+        </article>
+        <article class="project">
+          <div>
+            <div class="project-number">PROJECT_003</div>
+            <h3>NEXUS CORE</h3>
+            <p>Experiments in code, AI, and making my computer do increasingly questionable things.</p>
+          </div>
+          <div class="project-tag">Code / Experimental</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section now" id="now">
+      <div class="section-label">03 / RIGHT NOW</div>
+      <h2>Currently consuming my brain.</h2>
+      <div class="now-grid">
+        <article class="now-item"><small>Listening to</small><strong>Dark R&amp;B, rap &amp; cinematic stuff</strong></article>
+        <article class="now-item"><small>Working on</small><strong>Making KAIVAZ actually exist online</strong></article>
+        <article class="now-item"><small>Thinking about</small><strong>How to finish projects instead of collecting them</strong></article>
+        <article class="now-item"><small>Internet status</small><strong>Probably online</strong></article>
+      </div>
+    </section>
+
+    <section class="quote" aria-label="A note">
+      <p>“I don't really have a niche yet.<br><span>That's probably the point.</span>”</p>
+    </section>
+
+    <section class="section music" id="music">
+      <div class="section-label">04 / SOUND FILES</div>
+      <div class="section-heading">
+        <h2>The music <span>archive.</span></h2>
+        <p>Original work. More when it's ready.</p>
+      </div>
+      <div class="player">
+        <div class="player-art" aria-hidden="true">
+          <span>KV</span>
+          <small>KAIVAZ<br>ARCHIVE / 001</small>
+        </div>
+        <div class="player-main">
+          <div class="now-label">NOW SELECTED</div>
+          <div class="track-title" id="track-title">Choose a track</div>
+          <div class="track-sub" id="track-sub">The player is waiting.</div>
+          <div class="progress-wrap">
+            <span id="current-time">0:00</span>
+            <input id="seek" type="range" min="0" max="100" value="0" aria-label="Seek through track">
+            <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="prev" type="button" aria-label="Previous track">|◀</button>
+            <button id="play" class="play" type="button" aria-label="Play">▶</button>
+            <button id="next" type="button" aria-label="Next track">▶|</button>
+            <span class="volume-label">VOL</span>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+          </div>
+        </div>
+      </div>
+      <ol class="track-list" id="track-list">
+        <li class="empty">Loading music library…</li>
+      </ol>
+      <p class="music-note">The archive lives in <code>/songs</code>. Track listings are managed in <code>assets/js/songs.js</code>.</p>
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+
+    <section class="section find" id="find">
+      <div class="section-label">05 / FIND ME ELSEWHERE</div>
+      <h2>The escape routes.</h2>
+      <div class="social-grid">
+        <a href="https://www.instagram.com/milest3e0n3_va/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><b>↗</b></a>
+        <a href="https://www.youtube.com/@MilesT3e0n3_VA" target="_blank" rel="noopener noreferrer"><span>YouTube</span><b>↗</b></a>
+        <a href="https://www.facebook.com/profile.php?id=61551910379253" target="_blank" rel="noopener noreferrer"><span>Facebook</span><b>↗</b></a>
+        <a href="https://www.tiktok.com/@milest3e0n1_va" target="_blank" rel="noopener noreferrer"><span>TikTok</span><b>↗</b></a>
+      </div>
+    </section>
+
+    <footer>
+      <a class="footer-mark" href="#home">KAIVAZ<span>.</span></a>
+      <span>© 2026 KAIVAZ. BUILT ON THE INTERNET, UNFORTUNATELY.</span>
+      <a class="back-top" href="#home">↑ BACK TO THE TOP</a>
+    </footer>
+  </main>
+
+  <script src="assets/js/songs.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
