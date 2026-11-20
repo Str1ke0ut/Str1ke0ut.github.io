@@ -453,3 +453,56 @@ input[type="range"] { accent-color: var(--red); }
   .status-dot { animation: status-pulse 2.4s ease-in-out infinite; }
   @keyframes status-pulse { 50% { opacity: .45; box-shadow: 0 0 3px var(--red); } }
 }
+
+
+/* Intermittent quote glitch / shutter effect */
+.quote .glitch-text {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  will-change: transform, filter;
+}
+.quote .glitch-text::before,
+.quote .glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+.quote .glitch-text::before { color: #ff4058; text-shadow: 2px 0 #ff4058; }
+.quote .glitch-text::after { color: #8affd0; text-shadow: -2px 0 #8affd0; }
+.quote .glitch-text.is-glitching { animation: quote-shutter .62s steps(1, end); }
+.quote .glitch-text.is-glitching::before { opacity: .9; animation: quote-slice-a .62s steps(1, end); }
+.quote .glitch-text.is-glitching::after { opacity: .85; animation: quote-slice-b .62s steps(1, end); }
+@keyframes quote-shutter {
+  0%, 100% { transform: translateX(0); filter: none; }
+  12% { transform: translateX(-3px) skewX(-2deg); filter: contrast(1.5); }
+  18% { transform: translateX(3px); }
+  31% { transform: translateX(-1px); filter: brightness(1.5); }
+  46% { transform: translateX(2px) skewX(1deg); }
+  58% { transform: translateX(0); filter: none; }
+  72% { transform: translateX(-2px); }
+  80% { transform: translateX(1px); }
+}
+@keyframes quote-slice-a {
+  0%, 100% { clip-path: inset(0 0 100% 0); transform: translateX(0); }
+  12% { clip-path: inset(12% 0 70% 0); transform: translateX(-5px); }
+  28% { clip-path: inset(52% 0 30% 0); transform: translateX(4px); }
+  46% { clip-path: inset(78% 0 8% 0); transform: translateX(-3px); }
+  63% { clip-path: inset(30% 0 55% 0); transform: translateX(5px); }
+}
+@keyframes quote-slice-b {
+  0%, 100% { clip-path: inset(100% 0 0 0); transform: translateX(0); }
+  17% { clip-path: inset(68% 0 14% 0); transform: translateX(4px); }
+  35% { clip-path: inset(8% 0 76% 0); transform: translateX(-5px); }
+  54% { clip-path: inset(42% 0 40% 0); transform: translateX(3px); }
+  76% { clip-path: inset(86% 0 3% 0); transform: translateX(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .quote .glitch-text.is-glitching,
+  .quote .glitch-text.is-glitching::before,
+  .quote .glitch-text.is-glitching::after { animation: none; }
+}
