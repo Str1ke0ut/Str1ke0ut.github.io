@@ -46,5 +46,25 @@
     scheduleGlitch();
   }
 
+  // Reveal sections as they enter the viewport. Keep everything visible if unsupported.
+  const revealTargets = document.querySelectorAll(
+    '.section, .quote, .project, .now-item, .upcoming-card, .player, .social-grid a'
+  );
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealTargets.forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.setProperty('--reveal-delay', (i % 4) * 75 + 'ms');
+    });
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+    revealTargets.forEach(el => observer.observe(el));
+  }
+
   render();
 })();
