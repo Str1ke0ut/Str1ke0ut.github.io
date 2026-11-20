@@ -29,5 +29,22 @@
   seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=(Number(seek.value)/100)*audio.duration;});
   volume.addEventListener('input',()=>audio.volume=Number(volume.value));audio.volume=.8;
   document.body.dataset.theme='messiah';
+
+  // Short shutter-glitch at irregular 5–7 second intervals.
+  const quoteGlitch = document.querySelector('.quote .glitch-text');
+  if (quoteGlitch && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const scheduleGlitch = () => {
+      const delay = 5000 + Math.random() * 2000;
+      window.setTimeout(() => {
+        quoteGlitch.classList.remove('is-glitching');
+        void quoteGlitch.offsetWidth;
+        quoteGlitch.classList.add('is-glitching');
+        window.setTimeout(() => quoteGlitch.classList.remove('is-glitching'), 700);
+        scheduleGlitch();
+      }, delay);
+    };
+    scheduleGlitch();
+  }
+
   render();
 })();
