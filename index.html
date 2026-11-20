@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -134,6 +134,24 @@
         <li class="empty">Loading music library…</li>
       </ol>
       <p class="music-note">The archive lives in <code>/songs</code>. Track listings are managed in <code>assets/js/songs.js</code>.</p>
+
+      <div class="upcoming-heading">
+        <div class="section-label">05 / ON THE HORIZON</div>
+        <h3>Currently in the works<span>.</span></h3>
+        <p>Not released yet. Keep an eye out.</p>
+      </div>
+      <div class="upcoming-grid" aria-label="Upcoming music">
+        <article class="upcoming-card reflections">
+          <div class="upcoming-top"><span>ALBUM / 001</span><span class="coming-soon">COMING SOON</span></div>
+          <div class="upcoming-art" aria-hidden="true"><span>R</span><small>KAIVAZ<br>FULL-LENGTH PROJECT</small></div>
+          <div class="upcoming-info"><h4>REFLECTIONS</h4><p>An upcoming KAIVAZ album.</p></div>
+        </article>
+        <article class="upcoming-card kaleidoscope">
+          <div class="upcoming-top"><span>SINGLE / 001</span><span class="coming-soon">COMING SOON</span></div>
+          <div class="upcoming-art" aria-hidden="true"><span>K</span><small>KAIVAZ<br>NEW SINGLE</small></div>
+          <div class="upcoming-info"><h4>KALEIDOSCOPE</h4><p>The next single. Coming soon.</p></div>
+        </article>
+      </div>
       <audio id="audio" preload="metadata"></audio>
     </section>
 
@@ -155,7 +173,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/songs.js?v=2"></script>
+  <script src="assets/js/songs.js?v=3"></script>
   <script src="assets/js/app.js?v=3"></script>
 </body>
 </html>
