@@ -506,3 +506,49 @@ input[type="range"] { accent-color: var(--red); }
   .quote .glitch-text.is-glitching::before,
   .quote .glitch-text.is-glitching::after { animation: none; }
 }
+
+
+/* Upcoming music announcements */
+.upcoming-heading { margin: 42px 0 16px; }
+.upcoming-heading .section-label { margin-bottom: 8px; }
+.upcoming-heading h3 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.3rem); letter-spacing: -.055em; }
+.upcoming-heading h3 span { color: var(--red); }
+.upcoming-heading > p { margin: 5px 0 0; color: var(--muted); font: 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.upcoming-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.upcoming-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(255,255,255,.035), transparent 60%), var(--panel);
+  transition: border-color .25s ease, transform .25s ease;
+}
+.upcoming-card:hover { transform: translateY(-3px); border-color: var(--red); }
+.upcoming-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--muted); font: 8px var(--mono); letter-spacing: .1em; }
+.coming-soon { color: var(--acid); border: 1px solid currentColor; padding: 4px 6px; white-space: nowrap; }
+.upcoming-art {
+  aspect-ratio: 16 / 8;
+  margin: 15px 0;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(225,225,255,.2), transparent 30%),
+    repeating-conic-gradient(from 25deg at 70% 45%, rgba(255,255,255,.07) 0deg 8deg, transparent 8deg 18deg),
+    linear-gradient(135deg, #17131f, #30213d 48%, #101014);
+}
+.upcoming-art > span { font-size: clamp(3rem, 9vw, 5rem); font-weight: 700; line-height: .8; letter-spacing: -.12em; }
+.upcoming-art small { font: 8px/1.5 var(--mono); letter-spacing: .1em; }
+.kaleidoscope .upcoming-art {
+  background:
+    conic-gradient(from 45deg at 50% 50%, #162d3d, #5b315d, #a34c53, #d2a64a, #285b58, #162d3d);
+  position: relative;
+}
+.kaleidoscope .upcoming-art > span { text-shadow: 0 3px 24px rgba(0,0,0,.55); }
+.upcoming-info h4 { margin: 0; font-size: 20px; letter-spacing: -.04em; }
+.upcoming-info p { margin: 3px 0 0; color: var(--muted); font-size: 11px; }
+@media (max-width: 560px) {
+  .upcoming-grid { grid-template-columns: 1fr; }
+  .upcoming-art { aspect-ratio: 16 / 7; }
+}
